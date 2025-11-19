@@ -1,0 +1,54 @@
+{
+  "name": "@xiaohe01/stylelint-config",
+  "type": "module",
+  "version": "2.4.0",
+  "description": "🤚 Xiaohe's Stylelint config preset",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/xiaohe-config/tree/main/packages/stylelint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/xiaohe-config.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": "https://github.com/xiaohe0601/xiaohe-config/issues",
+  "keywords": [
+    "stylelint-config"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "nr build",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "release": "bumpp"
+  },
+  "peerDependencies": {
+    "stylelint": ">=16.13.0"
+  },
+  "dependencies": {
+    "local-pkg": "catalog:node",
+    "postcss-html": "catalog:style",
+    "postcss-scss": "catalog:style",
+    "stylelint-config-recess-order": "catalog:lint",
+    "stylelint-order": "catalog:lint",
+    "stylelint-scss": "catalog:lint"
+  },
+  "devDependencies": {
+    "@xiaohe-config/shared": "workspace:^",
+    "stylelint": "catalog:lint"
+  }
+}

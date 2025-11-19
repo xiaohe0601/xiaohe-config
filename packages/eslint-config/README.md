@@ -1,0 +1,78 @@
+<div align="center">
+  <h1>Xiaohe ESLint Config</h1>
+  <span>✌️ Xiaohe's ESLint config preset</span>
+</div>
+
+<br>
+
+[![github stars][github-stars-src]][github-stars-href]
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![JSDocs][jsdocs-src]][jsdocs-href]
+[![License][license-src]][license-href]
+
+### 🚁 Installation
+
+```shell
+# pnpm
+pnpm add -D eslint @xiaohe01/eslint-config
+
+# yarn
+yarn add --dev eslint @xiaohe01/eslint-config
+
+# npm
+npm install -D eslint @xiaohe01/eslint-config
+```
+
+> [!WARNING]
+> Require NodeJS >= 18.18.0, and ESLint >= 9.5.0.
+
+### 🛹 Usage
+
+Create `eslint.config.mjs` in your project root:
+
+```js
+import { defineConfig } from "@xiaohe01/eslint-config";
+
+export default defineConfig();
+```
+
+> [!NOTE]
+> If you want to use TypeScript configuration files,
+> please refer to [typescript-configuration-files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files).
+
+Add script for `package.json`, for example:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  }
+}
+```
+
+For more information, please refer to [antfu/eslint-config](https://github.com/antfu/eslint-config).
+
+### 🐼 Comparing to antfu/eslint-config
+
+Most of the rules are the same, but there are some differences:
+
+- I prefer to use `""` and `;`.
+- Some different rules for uni-app.
+- Maybe stricter and simpler.
+
+### 🏆 License
+
+MIT [LICENSE](../../LICENSE)
+
+[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/xiaohe-config?style=flat&color=1fa669&labelColor=18181b&logo=github
+[github-stars-href]: https://github.com/xiaohe0601/xiaohe-config
+[npm-version-src]: https://img.shields.io/npm/v/@xiaohe01/eslint-config?style=flat&color=1fa669&labelColor=18181b&logo=npm
+[npm-version-href]: https://npmjs.com/package/@xiaohe01/eslint-config
+[npm-downloads-src]: https://img.shields.io/npm/dm/@xiaohe01/eslint-config?style=flat&color=1fa669&labelColor=18181b
+[npm-downloads-href]: https://npmjs.com/package/@xiaohe01/eslint-config
+[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-1fa669?style=flat&labelColor=18181b
+[jsdocs-href]: https://www.jsdocs.io/package/@xiaohe01/eslint-config
+[license-src]: https://img.shields.io/github/license/xiaohe0601/xiaohe-config.svg?style=flat&color=1fa669&labelColor=18181b
+[license-href]: https://github.com/xiaohe0601/xiaohe-config/blob/main/LICENSE

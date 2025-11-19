@@ -1,0 +1,26 @@
+{
+  "name": "@xiaohe01/tsconfig",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "🤞 Xiaohe's TSConfig preset",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/xiaohe-config/tree/main/packages/tsconfig",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/xiaohe-config.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": "https://github.com/xiaohe0601/xiaohe-config/issues",
+  "keywords": [
+    "tsconfig"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./tsconfig.basic.json",
+    "./*": "./*"
+  },
+  "scripts": {
+    "release": "bumpp"
+  }
+}

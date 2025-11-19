@@ -1,0 +1,45 @@
+{
+  "name": "xiaohe-config",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "postinstall": "nr build:eslint-config && nr build:stylelint-config",
+    "play": "nr -C playground dev",
+    "dev:eslint-config": "nr -C packages/eslint-config dev",
+    "dev:stylelint-config": "nr -C packages/stylelint-config dev",
+    "build:eslint-config": "nr -C packages/eslint-config build",
+    "build:stylelint-config": "nr -C packages/stylelint-config build",
+    "release:eslint-config": "nr -C packages/eslint-config release",
+    "release:stylelint-config": "nr -C packages/stylelint-config release",
+    "release:tsconfig": "nr -C packages/tsconfig release",
+    "lint": "eslint --cache",
+    "lint:fix": "nr lint --fix",
+    "lint:type": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@antfu/ni": "catalog:cli",
+    "@types/node": "catalog:types",
+    "@xiaohe01/eslint-config": "workspace:^",
+    "@xiaohe01/tsconfig": "workspace:^",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:lint",
+    "esno": "catalog:script",
+    "lint-staged": "catalog:lint",
+    "pncat": "catalog:cli",
+    "simple-git-hooks": "catalog:lint",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:tsc",
+    "vitest": "catalog:test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

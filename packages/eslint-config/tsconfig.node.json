@@ -1,0 +1,14 @@
+{
+  "extends": "@xiaohe01/tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "ES2020"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "tsdown.config.ts"
+  ]
+}

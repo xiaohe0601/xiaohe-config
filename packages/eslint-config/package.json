@@ -1,0 +1,49 @@
+{
+  "name": "@xiaohe01/eslint-config",
+  "type": "module",
+  "version": "3.1.0",
+  "description": "✌️ Xiaohe's ESLint config preset",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/xiaohe-config/tree/main/packages/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/xiaohe-config.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": "https://github.com/xiaohe0601/xiaohe-config/issues",
+  "keywords": [
+    "eslint-config"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "nr build",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "release": "bumpp"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.5.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "local-pkg": "catalog:node"
+  },
+  "devDependencies": {
+    "@xiaohe-config/shared": "workspace:^"
+  }
+}

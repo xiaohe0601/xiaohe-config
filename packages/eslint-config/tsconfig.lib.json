@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "@xiaohe01/tsconfig",
+    "@xiaohe01/tsconfig/tsconfig.lib.json"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "ES2020"
+    ],
+    "types": []
+  },
+  "include": [
+    "src/**/*",
+    "../shared/src/**/*"
+  ]
+}
