@@ -10,7 +10,7 @@
     "stylelint:fix": "nr stylelint --fix"
   },
   "dependencies": {
-    "ress": "catalog:prod",
+    "ress": "catalog:frontend",
     "vue": "catalog:frontend"
   },
   "devDependencies": {

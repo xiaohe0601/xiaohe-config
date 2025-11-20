@@ -25,6 +25,13 @@ export default defineConfig({
       priority: 20
     },
     {
+      name: "frontend",
+      match: [
+        "ress"
+      ],
+      priority: 60
+    },
+    {
       name: "utils",
       match: [
         "es-toolkit"
