@@ -2,7 +2,6 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
-    "noEmit": false,
-    "skipLibCheck": false
+    "noEmit": false
   }
 }
