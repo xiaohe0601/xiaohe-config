@@ -16,7 +16,7 @@
     "release:tsconfig": "nr -C packages/tsconfig release",
     "lint": "eslint --cache",
     "lint:fix": "nr lint --fix",
-    "lint:type": "tsc --noEmit",
+    "lint:type": "vue-tsc -b --noEmit",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage"
@@ -34,7 +34,8 @@
     "simple-git-hooks": "catalog:lint",
     "tsdown": "catalog:build",
     "typescript": "catalog:tsc",
-    "vitest": "catalog:test"
+    "vitest": "catalog:test",
+    "vue-tsc": "catalog:tsc"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

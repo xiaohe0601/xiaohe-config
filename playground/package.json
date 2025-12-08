@@ -18,7 +18,6 @@
     "@vue/runtime-core": "catalog:dev",
     "@xiaohe01/stylelint-config": "workspace:^",
     "stylelint": "catalog:lint",
-    "vite": "catalog:build",
-    "vue-tsc": "catalog:tsc"
+    "vite": "catalog:build"
   }
 }
