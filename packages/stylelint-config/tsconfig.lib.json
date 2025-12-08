@@ -10,8 +10,7 @@
     ],
     "types": [
       "node"
-    ],
-    "skipLibCheck": true
+    ]
   },
   "include": [
     "src/**/*"
