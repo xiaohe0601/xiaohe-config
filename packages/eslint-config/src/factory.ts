@@ -11,9 +11,24 @@ export function defineConfig(
 ) {
   const { xiaoheOptions, antfuOptions } = resolveOptions(options);
 
-  const configs: Awaitable<UserConfigItem>[] = [
-    perfectionist()
-  ];
+  const configs: Awaitable<UserConfigItem>[] = [];
+
+  if (antfuOptions.pnpm) {
+    configs.push({
+      files: ["pnpm-workspace.yaml"],
+      rules: {
+        "pnpm/yaml-enforce-settings": ["error", {
+          settings: {
+            catalogMode: "prefer",
+            cleanupUnusedCatalogs: true,
+            shellEmulator: true
+          }
+        }]
+      }
+    });
+  }
+
+  configs.push(perfectionist());
 
   if (xiaoheOptions.uni) {
     configs.push(uni());

@@ -1,31 +1,36 @@
+catalogMode: prefer
+cleanupUnusedCatalogs: true
+shellEmulator: true
+
 packages:
   - docs
   - playground
   - packages/**
   - examples/**
+
 catalogs:
   build:
     "@vitejs/plugin-vue": ^6.0.2
-    tsdown: ^0.16.5
-    vite: ^7.2.2
+    tsdown: ^0.17.0
+    vite: ^7.2.6
   cli:
-    "@antfu/ni": ^27.0.1
-    bumpp: ^10.3.1
-    pncat: ^0.7.6
+    "@antfu/ni": ^28.0.0
+    bumpp: ^10.3.2
+    pncat: ^0.7.7
   dev:
-    "@vue/runtime-core": ^3.5.24
+    "@vue/runtime-core": ^3.5.25
   frontend:
     ress: ^5.0.2
-    vue: ^3.5.24
+    vue: ^3.5.25
   lint:
-    "@antfu/eslint-config": ^6.2.0
+    "@antfu/eslint-config": ^6.4.2
     eslint: ^9.39.1
     lint-staged: ^16.2.7
     simple-git-hooks: ^2.13.1
-    stylelint: ^16.25.0
+    stylelint: ^16.26.1
     stylelint-config-recess-order: ^7.4.0
     stylelint-order: ^7.0.0
-    stylelint-scss: ^6.12.1
+    stylelint-scss: ^6.13.0
   node:
     local-pkg: ^1.1.2
   script:
@@ -34,15 +39,15 @@ catalogs:
     postcss-html: ^1.8.0
     postcss-scss: ^4.0.9
   test:
-    vitest: ^4.0.10
+    vitest: ^4.0.15
   tsc:
     typescript: ~5.9.3
-    vue-tsc: ^3.1.4
+    vue-tsc: ^3.1.7
   types:
     "@types/node": ^22.19.1
   utils:
     es-toolkit: ^1.42.0
+
 onlyBuiltDependencies:
   - esbuild
-  - pncat
   - simple-git-hooks
