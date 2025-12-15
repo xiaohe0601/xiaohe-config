@@ -1,11 +1,12 @@
 import { antfu } from "@antfu/eslint-config";
 import type { Awaitable } from "@xiaohe-config/shared";
 import { perfectionist, uni } from "./configs";
+import { detectCatalogUsage } from "./helpers";
 import { resolveOptions } from "./options";
 import type { Options, UserConfigItem } from "./types";
 
 // eslint-disable-next-line ts/explicit-function-return-type
-export function defineConfig(
+export async function defineConfig(
   options: Options = {},
   ...userConfigs: Awaitable<UserConfigItem>[]
 ) {
@@ -14,14 +15,15 @@ export function defineConfig(
   const configs: Awaitable<UserConfigItem>[] = [];
 
   if (antfuOptions.pnpm) {
+    const catalogs = await detectCatalogUsage();
+
     configs.push({
       files: ["pnpm-workspace.yaml"],
       rules: {
         "pnpm/yaml-enforce-settings": ["error", {
           settings: {
-            catalogMode: "prefer",
-            cleanupUnusedCatalogs: true,
-            shellEmulator: true
+            shellEmulator: true,
+            ...(catalogs ? { catalogMode: "prefer" } : {})
           }
         }]
       }

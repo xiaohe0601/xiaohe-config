@@ -2,9 +2,10 @@ import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: "./src/index.ts",
-  platform: "neutral",
+  platform: "node",
   external: [
-    "eslint-plugin-perfectionist"
+    "eslint-plugin-perfectionist",
+    "find-up-simple"
   ],
   format: [
     "esm",

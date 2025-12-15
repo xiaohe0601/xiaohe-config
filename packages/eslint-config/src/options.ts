@@ -1,4 +1,5 @@
 import { isPkgExists, merge, omit, pick, UNI_PACKAGES, VUE_PACKAGES } from "@xiaohe-config/shared";
+import { findUpSync } from "find-up-simple";
 import { javascript, stylistic, vue } from "./overrides";
 import type { AntfuOptions, Options, XiaoheOptionsConfig } from "./types";
 
@@ -27,6 +28,7 @@ export function resolveOptions(options: Options): {
     {
       javascript: {},
       markdown: false,
+      pnpm: !!findUpSync("pnpm-workspace.yaml"),
       stylistic: true,
       vue: isPkgExists(VUE_PACKAGES)
     } satisfies AntfuOptions,
