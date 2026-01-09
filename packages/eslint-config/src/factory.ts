@@ -1,7 +1,6 @@
 import { antfu } from "@antfu/eslint-config";
 import type { Awaitable } from "@xiaohe-config/shared";
 import { perfectionist, uni } from "./configs";
-import { detectCatalogUsage } from "./helpers";
 import { resolveOptions } from "./options";
 import type { Options, UserConfigItem } from "./types";
 
@@ -15,15 +14,12 @@ export async function defineConfig(
   const configs: Awaitable<UserConfigItem>[] = [];
 
   if (antfuOptions.pnpm) {
-    const catalogs = await detectCatalogUsage();
-
     configs.push({
       files: ["pnpm-workspace.yaml"],
       rules: {
         "pnpm/yaml-enforce-settings": ["error", {
           settings: {
-            shellEmulator: true,
-            ...(catalogs ? { catalogMode: "prefer" } : {})
+            shellEmulator: true
           }
         }]
       }
