@@ -13,7 +13,7 @@ catalogs:
     vite: ^7.3.1
   cli:
     "@antfu/ni": ^28.1.0
-    bumpp: ^10.3.2
+    bumpp: ^10.4.0
     pncat: ^0.7.8
   dev:
     "@vue/runtime-core": ^3.5.26
@@ -21,7 +21,7 @@ catalogs:
     ress: ^5.0.2
     vue: ^3.5.26
   lint:
-    "@antfu/eslint-config": ^6.7.3
+    "@antfu/eslint-config": ^7.0.0
     eslint: ^9.39.2
     lint-staged: ^16.2.7
     simple-git-hooks: ^2.13.1
@@ -34,15 +34,15 @@ catalogs:
   script:
     esno: ^4.8.0
   style:
-    postcss-html: ^1.8.0
+    postcss-html: ^1.8.1
     postcss-scss: ^4.0.9
   test:
-    vitest: ^4.0.16
+    vitest: ^4.0.17
   tsc:
     typescript: ~5.9.3
     vue-tsc: ^3.2.2
   types:
-    "@types/node": ^22.19.3
+    "@types/node": ^22.19.6
   utils:
     es-toolkit: ^1.43.0
 

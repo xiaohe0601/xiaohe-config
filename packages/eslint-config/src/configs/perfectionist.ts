@@ -14,24 +14,23 @@ export async function perfectionist(): Promise<TypedFlatConfigItem[]> {
       rules: {
         "perfectionist/sort-imports": ["error", {
           groups: [
-            ["builtin-type", "builtin"],
-            ["external-type", "external"],
-            ["parent-type", "parent"],
-            ["sibling-type", "sibling"],
-            ["index-type", "index"],
-            ["internal-type", "internal"],
-            "style",
-            ["side-effect", "side-effect-style"],
-            "object",
+            ["type-builtin", "value-builtin"],
+            ["type-external", "value-external"],
+            ["type-parent", "value-parent"],
+            ["type-sibling", "value-sibling"],
+            ["type-index", "value-index"],
+            ["type-internal", "value-internal"],
+            "side-effect",
+            "ts-equals-import",
             "unknown"
           ],
           internalPattern: [
-            "^~~/.*",
-            "^~/.*",
-            "^@@/.*",
-            "^@/.*"
+            "^~/.+",
+            "^~~/.+",
+            "^@/.+",
+            "^@@/.+"
           ],
-          newlinesBetween: "never",
+          newlinesBetween: 0,
           order: "asc",
           type: "natural"
         }]
