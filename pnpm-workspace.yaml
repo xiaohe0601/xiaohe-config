@@ -9,26 +9,26 @@ packages:
 catalogs:
   build:
     "@vitejs/plugin-vue": ^6.0.3
-    tsdown: ^0.18.4
+    tsdown: ^0.20.1
     vite: ^7.3.1
   cli:
-    "@antfu/ni": ^28.1.0
+    "@antfu/ni": ^28.2.0
     bumpp: ^10.4.0
     pncat: ^0.7.8
   dev:
-    "@vue/runtime-core": ^3.5.26
+    "@vue/runtime-core": ^3.5.27
   frontend:
     ress: ^5.0.2
-    vue: ^3.5.26
+    vue: ^3.5.27
   lint:
-    "@antfu/eslint-config": ^7.0.0
+    "@antfu/eslint-config": ~7.1.0
     eslint: ^9.39.2
     lint-staged: ^16.2.7
     simple-git-hooks: ^2.13.1
-    stylelint: ^16.26.1
-    stylelint-config-recess-order: ^7.4.0
+    stylelint: ^17.0.0
+    stylelint-config-recess-order: ^7.6.0
     stylelint-order: ^7.0.1
-    stylelint-scss: ^6.14.0
+    stylelint-scss: ^7.0.0
   node:
     local-pkg: ^1.1.2
   script:
@@ -37,14 +37,14 @@ catalogs:
     postcss-html: ^1.8.1
     postcss-scss: ^4.0.9
   test:
-    vitest: ^4.0.17
+    vitest: ^4.0.18
   tsc:
     typescript: ~5.9.3
-    vue-tsc: ^3.2.2
+    vue-tsc: ^3.2.3
   types:
-    "@types/node": ^22.19.6
+    "@types/node": ^22.19.7
   utils:
-    es-toolkit: ^1.43.0
+    es-toolkit: ^1.44.0
 
 onlyBuiltDependencies:
   - esbuild

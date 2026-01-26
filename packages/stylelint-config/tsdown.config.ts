@@ -9,5 +9,8 @@ export default defineConfig({
   ],
   dts: {
     build: true
-  }
+  },
+  inlineOnly: [
+    "es-toolkit"
+  ]
 });

@@ -2,7 +2,7 @@
   "name": "xiaohe-config",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "prepare": "simple-git-hooks",
     "postinstall": "nr build:eslint-config && nr build:stylelint-config",
