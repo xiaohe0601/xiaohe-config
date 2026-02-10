@@ -68,6 +68,11 @@ export function vue(options: OverridesOptionsVue): OptionsVue {
           "defineEmits",
           "defineSlots"
         ]
+      }],
+      "vue/singleline-html-element-content-newline": ["warn", {
+        externalIgnores: [
+          "text"
+        ]
       }]
     });
   }
