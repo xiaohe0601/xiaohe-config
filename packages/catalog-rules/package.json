@@ -1,0 +1,38 @@
+{
+  "name": "@xiaohe01/catalog-rules",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "👌 Xiaohe's catalog rules preset",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/xiaohe-config/tree/main/packages/catalog-rules",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/xiaohe-config.git",
+    "directory": "packages/catalog-rules"
+  },
+  "bugs": "https://github.com/xiaohe0601/xiaohe-config/issues",
+  "keywords": [
+    "catalog-rules"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "nr build",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "release": "bumpp"
+  }
+}

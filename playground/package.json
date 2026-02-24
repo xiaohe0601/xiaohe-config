@@ -10,12 +10,12 @@
     "stylelint:fix": "nr stylelint --fix"
   },
   "dependencies": {
-    "ress": "catalog:frontend",
+    "ress": "catalog:style",
     "vue": "catalog:frontend"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:build",
-    "@vue/runtime-core": "catalog:dev",
+    "@vue/runtime-core": "catalog:frontend",
     "@xiaohe01/stylelint-config": "workspace:^",
     "stylelint": "catalog:lint",
     "vite": "catalog:build"
