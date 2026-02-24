@@ -10,6 +10,7 @@
 
 ### 📦 Packages
 
+- [catalog-rules](./packages/catalog-rules)
 - [eslint-config](./packages/eslint-config)
 - [stylelint-config](./packages/stylelint-config)
 - [tsconfig](./packages/tsconfig)
