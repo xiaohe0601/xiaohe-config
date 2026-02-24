@@ -34,5 +34,8 @@
     "dev": "tsdown --watch",
     "build": "tsdown",
     "release": "bumpp"
+  },
+  "peerDependencies": {
+    "pncat": "*"
   }
 }

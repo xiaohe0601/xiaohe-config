@@ -145,7 +145,11 @@ importers:
         specifier: catalog:tsc
         version: 3.2.5(typescript@5.9.3)
 
-  packages/catalog-rules: {}
+  packages/catalog-rules:
+    dependencies:
+      pncat:
+        specifier: '*'
+        version: 0.10.2
 
   packages/editor-config: {}
 

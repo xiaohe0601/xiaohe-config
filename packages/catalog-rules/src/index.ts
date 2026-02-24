@@ -1,4 +1,6 @@
-export const catalogRules = [
+import type { CatalogRule } from "pncat";
+
+export const catalogRules: CatalogRule[] = [
   {
     name: "xiaohe",
     priority: 1,
