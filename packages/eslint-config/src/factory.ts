@@ -18,19 +18,6 @@ export async function defineConfig(
 
   const configs: Awaitable<UserConfigItem>[] = [];
 
-  if (antfuOptions.pnpm) {
-    configs.push({
-      files: ["pnpm-workspace.yaml"],
-      rules: {
-        "pnpm/yaml-enforce-settings": ["error", {
-          settings: {
-            shellEmulator: true
-          }
-        }]
-      }
-    });
-  }
-
   configs.push(perfectionist());
 
   if (xiaoheOptions.uni) {

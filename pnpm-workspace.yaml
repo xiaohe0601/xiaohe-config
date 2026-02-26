@@ -1,4 +1,5 @@
 shellEmulator: true
+trustPolicy: no-downgrade
 
 packages:
   - docs
