@@ -5,37 +5,48 @@ export const catalogRules: CatalogRule[] = [
     name: "xiaohe",
     priority: 1,
     match: [
-      /^@xiaohe01/
+      /^@xiaohe01\//
     ]
   },
   {
     name: "dcloudio",
-    priority: 5,
+    priority: 1,
     match: [
-      /^@dcloudio/
+      /^@dcloudio\//
     ]
   },
+
   {
     name: "types",
     priority: 10,
     match: [
-      /types\b/,
-      /@types/,
-      /typings/
+      /^@types\//,
+      /\btypes\b/,
+      /\btypings\b/
+    ]
+  },
+
+  {
+    name: "build",
+    priority: 20,
+    match: [
+      "@uni-helper/plugin-uni",
+      "terser",
+      /rolldown/,
+      /rollup/,
+      /tsdown/,
+      /tsup/,
+      /unbuild/,
+      /unplugin/,
+      /\bvite\b/,
+      /vitejs/
     ]
   },
   {
-    name: "cli",
+    name: "docs",
     priority: 20,
     match: [
-      "@antfu/ni",
-      "@uni-helper/unh",
-      "commitizen",
-      "cz-git",
-      "minimist",
-      "pncat",
-      "taze",
-      /bump/
+      /vitepress/
     ]
   },
   {
@@ -43,119 +54,53 @@ export const catalogRules: CatalogRule[] = [
     priority: 20,
     match: [
       "husky",
-      /biome/,
+      "lint-staged",
+      /eslint/,
       /git-hooks/,
-      /lint/,
-      /prettier/
-    ]
-  },
-  {
-    name: "monorepo",
-    priority: 20,
-    match: [
-      /lerna/,
-      /turbo/
-    ]
-  },
-  {
-    name: "e2e",
-    priority: 30,
-    match: [
-      /chromium/,
-      /cypress/,
-      /nightwatch/,
-      /playwright/,
-      /puppeteer/,
-      /webdriverio/
+      /stylelint/
     ]
   },
   {
     name: "test",
-    priority: 30,
+    priority: 20,
     match: [
       /jest/,
       /test/,
       /vitest/
     ]
   },
+
   {
-    name: "build",
-    priority: 40,
+    name: "cli",
+    priority: 30,
     match: [
-      "@uni-helper/plugin-uni",
-      /build/,
-      /napi/,
-      /rolldown/,
-      /rollup/,
-      /rspack/,
-      /terser/,
-      /tsdown/,
-      /tsup/,
-      /unplugin/,
-      /vite/,
-      /webpack/
-    ]
-  },
-  {
-    name: "docs",
-    priority: 40,
-    match: [
-      /vitepress/,
-      /vuepress/
+      "@antfu/ni",
+      "@uni-helper/unh",
+      "bumpp",
+      "minimist",
+      "pncat"
     ]
   },
   {
     name: "i18n",
-    priority: 40,
+    priority: 30,
     match: [
-      "next-intl",
-      /i18n/
-    ]
-  },
-  {
-    name: "script",
-    priority: 40,
-    match: [
-      "esno",
-      "unrun",
-      /jiti/,
-      /tsx/
+      /i18n/,
+      /intl/
     ]
   },
   {
     name: "icons",
-    priority: 50,
+    priority: 30,
     match: [
-      /icon/,
       /iconify/,
+      /icons/,
       /lucide/
     ]
   },
   {
-    name: "markdown",
-    priority: 50,
-    match: [
-      /markdown/,
-      /streamdown/,
-      /turndown/
-    ]
-  },
-  {
-    name: "network",
-    priority: 50,
-    match: [
-      "picoquery",
-      "qs",
-      "ws",
-      /alova/,
-      /axios/,
-      /fetch/,
-      /websocket/
-    ]
-  },
-  {
     name: "parser",
-    priority: 50,
+    priority: 30,
     match: [
       /acorn/,
       /babel/,
@@ -170,31 +115,18 @@ export const catalogRules: CatalogRule[] = [
     ]
   },
   {
-    name: "server",
-    priority: 50,
+    name: "script",
+    priority: 30,
     match: [
-      "nitropack",
-      /express/,
-      /fastify/,
-      /koa/
-    ]
-  },
-  {
-    name: "style",
-    priority: 50,
-    match: [
-      "clsx",
-      "ress",
-      /autoprefixer/,
-      /css/,
-      /less/,
-      /sass/,
-      /tailwind/
+      "esno",
+      "jiti",
+      "tsx",
+      "unrun"
     ]
   },
   {
     name: "syntax",
-    priority: 50,
+    priority: 30,
     match: [
       /highlight/,
       /katex/,
@@ -203,75 +135,19 @@ export const catalogRules: CatalogRule[] = [
       /shiki/
     ]
   },
-  {
-    name: "tsc",
-    priority: 50,
-    match: [
-      /tsc/,
-      /tsconfig/,
-      /typescript/
-    ]
-  },
-  {
-    name: "vscode",
-    priority: 50,
-    match: [
-      /vscode/
-    ]
-  },
+
   {
     name: "ai",
-    priority: 60,
+    priority: 40,
     match: [
       "ai",
-      /@ai-sdk/,
+      /ai-sdk/,
       /agent-sdk/
     ]
   },
   {
-    name: "database",
-    priority: 60,
-    match: [
-      "pg",
-      /database/,
-      /datastore/,
-      /mongo/,
-      /orm/,
-      /postgres/,
-      /prisma/,
-      /sql/,
-      /supabase/
-    ]
-  },
-  {
-    name: "frontend",
-    priority: 60,
-    match: [
-      "color",
-      /angular/,
-      /antd/,
-      /component/,
-      /d3/,
-      /design/,
-      /dnd/,
-      /element/,
-      /monaco/,
-      /motion/,
-      /pinia/,
-      /react/,
-      /redux/,
-      /svelte/,
-      /swiper/,
-      /three/,
-      /vant/,
-      /vue/,
-      /zustand/,
-      /-ui|\/ui/
-    ]
-  },
-  {
     name: "node",
-    priority: 60,
+    priority: 40,
     match: [
       "cac",
       "consola",
@@ -289,24 +165,103 @@ export const catalogRules: CatalogRule[] = [
       /shadcn/,
       /tar/,
       /zip/,
-      /cli-/,
       /find-/,
       /fs(?=-)|(?<=-)fs/,
       /pkg(?=-)|(?<=-)pkg/
     ]
   },
   {
+    name: "network",
+    priority: 40,
+    match: [
+      "picoquery",
+      /alova/,
+      /axios/
+    ]
+  },
+  {
+    name: "style",
+    priority: 40,
+    match: [
+      "clsx",
+      "ress",
+      /autoprefixer/,
+      /css/,
+      /less/,
+      /sass/,
+      /tailwind/
+    ]
+  },
+  {
+    name: "tsc",
+    priority: 40,
+    match: [
+      /tsc/,
+      /tsconfig/,
+      /typescript/
+    ]
+  },
+  {
     name: "utils",
-    priority: 60,
+    priority: 40,
     match: [
       "es-toolkit",
-      /@vueuse\//,
+      /^@vueuse\//,
       /dayjs/,
       /lodash/,
       /magic-string/,
       /nanoid/,
       /utils/,
       /zod/
+    ]
+  },
+
+  {
+    name: "backend",
+    priority: 50,
+    match: [
+      /drizzle/,
+      /express/,
+      /fastify/,
+      /hono/,
+      /koa/,
+      /kysely/,
+      /mongodb/,
+      /mysql/,
+      /nestjs/,
+      /nitro/,
+      /pg/,
+      /postgres/,
+      /prisma/,
+      /redis/,
+      /sqlite/,
+      /typeorm/
+    ]
+  },
+  {
+    name: "frontend",
+    priority: 50,
+    match: [
+      "color",
+      /angular/,
+      /antd/,
+      /d3/,
+      /design/,
+      /echarts/,
+      /element/,
+      /monaco/,
+      /motion/,
+      /pinia/,
+      /react/,
+      /redux/,
+      /solid/,
+      /svelte/,
+      /swiper/,
+      /three/,
+      /vant/,
+      /zustand/,
+      /vue/,
+      /-ui|\/ui/
     ]
   }
 ];
