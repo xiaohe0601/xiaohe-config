@@ -10,7 +10,9 @@ export default defineConfig({
   dts: {
     build: true
   },
-  inlineOnly: [
-    "es-toolkit"
-  ]
+  deps: {
+    onlyAllowBundle: [
+      "es-toolkit"
+    ]
+  }
 });

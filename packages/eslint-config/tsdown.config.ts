@@ -10,12 +10,14 @@ export default defineConfig({
   dts: {
     build: true
   },
-  inlineOnly: [
-    "es-toolkit"
-  ],
-  external: [
-    "eslint-flat-config-utils",
-    "eslint-plugin-perfectionist",
-    "find-up-simple"
-  ]
+  deps: {
+    onlyAllowBundle: [
+      "es-toolkit"
+    ],
+    neverBundle: [
+      "eslint-flat-config-utils",
+      "eslint-plugin-perfectionist",
+      "find-up-simple"
+    ]
+  }
 });

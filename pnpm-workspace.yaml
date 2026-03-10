@@ -8,24 +8,24 @@ packages:
   - examples/**
 
 overrides:
-  eslint: 9.39.3
+  eslint: 9.39.4
 
 catalogs:
   build:
     "@vitejs/plugin-vue": ^6.0.4
-    tsdown: ^0.20.3
+    tsdown: ^0.21.1
     vite: ^7.3.1
   cli:
-    "@antfu/ni": ^28.2.0
+    "@antfu/ni": ^28.3.0
     bumpp: ^10.4.1
-    pncat: ^0.10.2
+    pncat: ^0.10.4
   frontend:
-    "@vue/runtime-core": ^3.5.29
-    vue: ^3.5.29
+    "@vue/runtime-core": ^3.5.30
+    vue: ^3.5.30
   lint:
-    "@antfu/eslint-config": ~7.6.1
-    eslint: ^9.39.3
-    lint-staged: ^16.2.7
+    "@antfu/eslint-config": ~7.7.0
+    eslint: ^9.39.4
+    lint-staged: ^16.3.2
     simple-git-hooks: ^2.13.1
     stylelint: ^17.4.0
     stylelint-config-recess-order: ^7.6.1
@@ -45,9 +45,9 @@ catalogs:
     typescript: ~5.9.3
     vue-tsc: ^3.2.5
   types:
-    "@types/node": ^24.10.14
+    "@types/node": ^24.12.0
   utils:
-    es-toolkit: ^1.44.0
+    es-toolkit: ^1.45.1
 
 onlyBuiltDependencies:
   - esbuild
