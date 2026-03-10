@@ -1,6 +1,6 @@
 import { isPkgExists, merge, omit, pick, UNI_PACKAGES, VUE_PACKAGES } from "@xiaohe-config/shared";
 import { findUpSync } from "find-up-simple";
-import { e18e, javascript, stylistic, vue } from "./overrides";
+import { javascript, stylistic, vue } from "./overrides";
 import type { AntfuOptions, Options, XiaoheOptionsConfig } from "./types";
 
 const xiaoheOptionsKeys = [
@@ -8,7 +8,6 @@ const xiaoheOptionsKeys = [
 ] satisfies Array<keyof XiaoheOptionsConfig>;
 
 const customOptionsKeys = [
-  "e18e",
   "javascript",
   "stylistic",
   "vue"
@@ -27,7 +26,7 @@ export function resolveOptions(options: Options): {
 
   const antfuOptions = merge(
     {
-      e18e: true,
+      e18e: false,
       javascript: {},
       markdown: false,
       pnpm: !!findUpSync("pnpm-workspace.yaml"),
@@ -38,7 +37,6 @@ export function resolveOptions(options: Options): {
   );
 
   const customOptions: Pick<AntfuOptions, typeof customOptionsKeys[number]> = {
-    e18e: getOverridesOptions(antfuOptions.e18e, e18e()),
     javascript: getOverridesOptions(antfuOptions.javascript, javascript()),
     stylistic: getOverridesOptions(antfuOptions.stylistic, stylistic()),
     vue: getOverridesOptions(antfuOptions.vue, vue({

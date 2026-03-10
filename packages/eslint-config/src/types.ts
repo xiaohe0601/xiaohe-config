@@ -8,7 +8,7 @@ import type {
 import type { Linter } from "eslint";
 import type { FlatConfigComposer } from "eslint-flat-config-utils";
 
-export type { OptionsE18e, OptionsVue, TypedFlatConfigItem } from "@antfu/eslint-config";
+export type { OptionsVue, TypedFlatConfigItem } from "@antfu/eslint-config";
 export type { FlatConfigComposer } from "eslint-flat-config-utils";
 
 export type OptionsJavascript = OptionsOverrides;
