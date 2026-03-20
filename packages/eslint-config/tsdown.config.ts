@@ -11,7 +11,7 @@ export default defineConfig({
     build: true
   },
   deps: {
-    onlyAllowBundle: [
+    onlyBundle: [
       "es-toolkit"
     ],
     neverBundle: [
