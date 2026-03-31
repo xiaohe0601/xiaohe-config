@@ -242,7 +242,7 @@ export const catalogRules: CatalogRule[] = [
     name: "frontend",
     priority: 50,
     match: [
-      "color",
+      /color/,
       /angular/,
       /antd/,
       /d3/,
