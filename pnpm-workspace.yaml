@@ -41,7 +41,7 @@ catalogs:
   test:
     vitest: ^4.1.2
   tsc:
-    typescript: ~5.9.3
+    typescript: ~6.0.2
     vue-tsc: ^3.2.6
   types:
     "@types/node": ^24.12.0
