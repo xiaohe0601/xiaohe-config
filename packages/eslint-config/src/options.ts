@@ -1,6 +1,6 @@
 import { isPkgExists, merge, omit, pick, UNI_PACKAGES, VUE_PACKAGES } from "@xiaohe-config/shared";
 import { findUpSync } from "find-up-simple";
-import { javascript, stylistic, vue } from "./overrides";
+import { javascript, perfectionist, stylistic, vue } from "./overrides";
 import type { AntfuOptions, Options, XiaoheOptionsConfig } from "./types";
 
 const xiaoheOptionsKeys = [
@@ -10,7 +10,8 @@ const xiaoheOptionsKeys = [
 const customOptionsKeys = [
   "javascript",
   "stylistic",
-  "vue"
+  "vue",
+  "perfectionist"
 ] satisfies Array<keyof AntfuOptions>;
 
 export function resolveOptions(options: Options): {
@@ -31,7 +32,8 @@ export function resolveOptions(options: Options): {
       markdown: false,
       pnpm: !!findUpSync("pnpm-workspace.yaml"),
       stylistic: true,
-      vue: isPkgExists(VUE_PACKAGES)
+      vue: isPkgExists(VUE_PACKAGES),
+      perfectionist: true
     } satisfies AntfuOptions,
     omit(options, xiaoheOptionsKeys)
   );
@@ -39,9 +41,13 @@ export function resolveOptions(options: Options): {
   const customOptions: Pick<AntfuOptions, typeof customOptionsKeys[number]> = {
     javascript: getOverridesOptions(antfuOptions.javascript, javascript()),
     stylistic: getOverridesOptions(antfuOptions.stylistic, stylistic()),
-    vue: getOverridesOptions(antfuOptions.vue, vue({
-      uni: xiaoheOptions.uni
-    }))
+    vue: getOverridesOptions(
+      antfuOptions.vue,
+      vue({
+        uni: xiaoheOptions.uni
+      })
+    ),
+    perfectionist: getOverridesOptions(antfuOptions.perfectionist, perfectionist())
   };
 
   return {

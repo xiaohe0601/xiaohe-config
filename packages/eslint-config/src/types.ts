@@ -13,6 +13,7 @@ export type { FlatConfigComposer } from "eslint-flat-config-utils";
 
 export type OptionsJavascript = OptionsOverrides;
 export type OptionsStylistic = StylisticConfig & OptionsOverrides;
+export type OptionsPerfectionist = OptionsOverrides;
 
 export interface XiaoheOptionsConfig {
   /**

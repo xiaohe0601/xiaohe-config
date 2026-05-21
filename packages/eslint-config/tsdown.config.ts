@@ -16,7 +16,6 @@ export default defineConfig({
     ],
     neverBundle: [
       "eslint-flat-config-utils",
-      "eslint-plugin-perfectionist",
       "find-up-simple"
     ]
   }
