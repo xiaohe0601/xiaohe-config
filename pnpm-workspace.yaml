@@ -1,4 +1,5 @@
 ignoreWorkspaceRootCheck: true
+minimumReleaseAge: 0
 shamefullyHoist: true
 shellEmulator: true
 trustPolicy: no-downgrade
@@ -48,6 +49,6 @@ catalogs:
   utils:
     es-toolkit: ^1.46.1
 
-onlyBuiltDependencies:
-  - esbuild
-  - simple-git-hooks
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
