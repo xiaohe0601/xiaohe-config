@@ -12,22 +12,22 @@ packages:
 
 catalogs:
   build:
-    "@vitejs/plugin-vue": ^6.0.7
-    tsdown: ^0.22.3
-    vite: ^8.1.0
+    "@vitejs/plugin-vue": ^6.0.8
+    tsdown: ^0.22.14
+    vite: ^8.2.0
   cli:
-    "@antfu/ni": ^30.2.0
-    bumpp: ^11.1.0
-    pncat: ^0.12.0
+    "@antfu/ni": ^30.3.0
+    bumpp: ^12.1.1
+    pncat: ^0.13.0
   frontend:
-    "@vue/runtime-core": ^3.5.39
-    vue: ^3.5.39
+    "@vue/runtime-core": ^3.5.40
+    vue: ^3.5.40
   lint:
-    "@antfu/eslint-config": ~9.1.0
-    eslint: ^10.6.0
-    lint-staged: ^17.0.8
+    "@antfu/eslint-config": ~9.2.0
+    eslint: ^10.8.0
+    lint-staged: ^17.3.0
     simple-git-hooks: ^2.13.1
-    stylelint: ^17.14.0
+    stylelint: ^17.14.1
     stylelint-config-recess-order: ^7.7.0
     stylelint-order: ^8.1.1
     stylelint-scss: ^7.2.0
@@ -36,18 +36,18 @@ catalogs:
   script:
     esno: ^4.8.0
   style:
-    postcss-html: ^1.8.1
+    postcss-html: ^2.0.0
     postcss-scss: ^4.0.9
     ress: ^5.0.2
   test:
-    vitest: ^4.1.9
+    vitest: ^4.1.10
   tsc:
     typescript: ~6.0.3
-    vue-tsc: ~3.3.5
+    vue-tsc: ~3.3.9
   types:
-    "@types/node": ^24.13.2
+    "@types/node": ^24.13.3
   utils:
-    es-toolkit: ^1.49.0
+    es-toolkit: ^1.50.0
 
 allowBuilds:
   esbuild: true
