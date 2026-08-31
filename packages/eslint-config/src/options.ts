@@ -72,5 +72,5 @@ function getOverridesOptions<T extends object>(options: boolean | T, overrides: 
     return overrides;
   }
 
-  return merge(overrides, options);
+  return merge(overrides, options) as T;
 }
